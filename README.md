@@ -65,3 +65,20 @@ python audio-transcriber.py
 6. Le résumé **Ollama** s'enchaîne
 7. Le résultat s'affiche dans la zone de texte
 8. Cliquer **💾 Sauvegarder .md** → choisir l'emplacement du fichier
+
+## 🧠 Prompt idéal de départ
+
+> Le prompt suivant est celui que j'aurais dû écrire pour arriver au plus proche
+> de ce projet en un seul échange avec une IA générative.
+
+Tu es un développeur Python expert en applications desktop et traitement audio.
+
+Crée une application Windows tkinter qui capture le son système (loopback), le transcrit localement avec faster-whisper, et résume le texte avec un LLM local (Ollama) :
+
+- **Capture audio** : sounddevice, entrée au choix (Stereo Mix / VB-Cable / micro), 16 kHz mono, buffer en mémoire puis sauvegarde WAV
+- **Transcription** : faster-whisper (modèles tiny/base/small/medium sélectionnables), VAD filter, timestamps, langue française par défaut
+- **Résumé** : requête POST à Ollama (/api/generate), modèle configurable, prompt structuré (sujet / points clés / décisions)
+- **Interface** : tkinter, bouton Record/Stop unique, sélecteur de périphérique, barre de progression indéterminée, champ résultat éditable, bouton Sauvegarder en .md, bouton Effacer
+- **Configuration** : persistée dans ~/.audio-transcriber-config.json (périphérique, modèles whisper/Ollama, dossier de sortie)
+- **Contraintes** : thread worker pour ne pas bloquer l'UI, compatible CPU uniquement (int8), zéro dépendance externe autre que les packages pip
+- **Cible** : Windows 11, Python 3.11+, Ollama installé localement
