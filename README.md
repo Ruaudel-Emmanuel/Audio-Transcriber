@@ -1,5 +1,20 @@
 # 🎧 Audio Transcriber
 
+Ce projet illustre mon approche : une IA 100 % locale qui transforme une tâche chronophage — comptes rendus, réunions — en un document exploitable en quelques minutes.
+
+---
+
+## 🤝 Ce projet, c'est aussi mon métier
+
+**Emmanuel Ruaudel — Directeur de la Transformation Numérique pour TPE/PME.**
+J'aide les dirigeants à libérer 5 à 10 h par semaine en automatisant leurs tâches
+répetitives : audit des processus, cas d'usage IA à fort ROI, déploiement et
+fiabilisation (n8n · Python · IA locale).
+
+👉 [LIGNE D'ACCROCHE DU REPO ICI]
+
+📧 [ruaudel.emmanuel@orange.fr](mailto:ruaudel.emmanuel@orange.fr) · 🌐 [rennesdev.fr](https://rennesdev.fr)
+
 Capture système → transcription locale → résumé IA → fichier .md
 
 ## Prérequis
