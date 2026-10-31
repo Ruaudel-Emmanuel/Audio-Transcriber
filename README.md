@@ -2,8 +2,6 @@
 
 Ce projet illustre mon approche : une IA 100 % locale qui transforme une tâche chronophage — comptes rendus, réunions — en un document exploitable en quelques minutes.
 
-## 🤝 Ce projet, c'est aussi mon métier
-
 Capture système → transcription locale → résumé IA → fichier .md
 
 ## Prérequis
