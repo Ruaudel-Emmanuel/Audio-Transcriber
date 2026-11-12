@@ -1,0 +1,38 @@
+name: Stale issues & PRs
+
+# Bot officiel GitHub — tourne 1x/jour sur les runners GitHub (pas de ressource VPS).
+# Issues : label "stale" après 60 j sans activité, fermeture auto 14 j après.
+# PR     : stale après 90 j, fermeture 30 j après.
+# Exemptions : labels pinned / security. Déclenchable à la main (workflow_dispatch).
+
+on:
+  schedule:
+    - cron: '30 3 * * *'   # tous les jours à 03:30 UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v11
+        with:
+          stale-issue-message: >-
+            Cette issue n'a pas eu d'activité depuis 60 jours. Sans réponse dans 14 jours,
+            elle sera fermée automatiquement. Ajoutez le label `pinned` pour la garder ouverte.
+          close-issue-message: >-
+            Fermée automatiquement : inactive depuis plus de 74 jours. Réouvrable à tout moment si besoin.
+          stale-pr-message: >-
+            Ce PR n'a pas eu d'activité depuis 90 jours. Il sera fermé automatiquement dans 30 jours sans activité.
+          close-pr-message: >-
+            Fermé automatiquement : inactif depuis plus de 120 jours.
+          days-before-stale: 60
+          days-before-close: 14
+          stale-issue-label: 'stale'
+          days-before-pr-stale: 90
+          days-before-pr-close: 30
+          exempt-issue-labels: 'pinned,security'
+          exempt-pr-labels: 'pinned,security'
