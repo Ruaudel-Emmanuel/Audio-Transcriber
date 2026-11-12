@@ -18,7 +18,7 @@ jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/stale@v11
+      - uses: actions/stale@4391f3da665fdf50b6810c1a66712fb9ba21aa93  # v11
         with:
           stale-issue-message: >-
             Cette issue n'a pas eu d'activité depuis 60 jours. Sans réponse dans 14 jours,
