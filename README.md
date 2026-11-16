@@ -7,7 +7,7 @@ Capture système → transcription locale → résumé IA → fichier .md
 ## Prérequis
 
 - **Python 3.11+** sur Windows
-- **Ollama** installé et lancé (`ollama serve`)
+- **Ollama** installé et lancé
 - Modèles Ollama pour le résumé : `qwen2.5:3b` ou `qwen2.5:7b`
 - **FFmpeg** (optionnel, pour meilleure conversion audio)
 
